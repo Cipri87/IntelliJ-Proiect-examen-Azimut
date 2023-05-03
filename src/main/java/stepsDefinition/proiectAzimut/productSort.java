@@ -1,4 +1,4 @@
-package stepsDefinition.proiect;
+package stepsDefinition.proiectAzimut;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -10,8 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-
-import java.time.Duration;
 
 import static java.lang.Thread.sleep;
 
