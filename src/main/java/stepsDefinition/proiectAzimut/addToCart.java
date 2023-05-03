@@ -35,7 +35,6 @@ public class addToCart {
     public void open_amazon_page() throws InterruptedException {
         driver.get("https://www.amazon.com/");
         sleep(1000);
-
     }
 
     @Then("Click All button and select Electronics then Office Electronics")
