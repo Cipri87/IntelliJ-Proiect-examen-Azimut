@@ -19,7 +19,7 @@ public class WebDriverInitialize {
                     "Please call WebDriverFactory.openBrowser() before use this method");
         }
     }
-    public static void openBrowser(String pageUrl) {
+    public static void openBrowser(String pagURL) {
         System.setProperty("webdriver.chrome.driver",
                 System.getProperty("user.dir") + "/src/main/java/driver/chromedriver.exe");
 
@@ -27,7 +27,7 @@ public class WebDriverInitialize {
         chromeOptions.addArguments("--remote-allow-origins=*");
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        WebDriver driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         driver.get("https://www.amazon.com/");
     }

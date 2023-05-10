@@ -24,7 +24,7 @@ public class Amazon {
     @Then("Enter email address and Continue")
     public void enter_email_address_and_continue() throws InterruptedException {
         WebDriverInitialize.getDriver().findElement(By.xpath("//input[@type='email']")).sendKeys(
-                "bogdan.ciprian2587@yahoo.ro");
+                "cici@yahoo.ro");
         sleep(2000);
         WebDriverInitialize.getDriver().findElement(By.id("continue")).click();
         sleep(2000);
@@ -33,7 +33,7 @@ public class Amazon {
     @Then("Enter password and Sign In")
     public void enter_password_and_sign_in() throws InterruptedException {
         WebDriverInitialize.getDriver().findElement(By.xpath("//input[@type='password']"))
-                .sendKeys("fba2017");
+                .sendKeys("look20023");
         sleep(2000);
         WebDriverInitialize.getDriver().findElement(By.xpath("//input[@id='signInSubmit']")).click();
         sleep(5000);
@@ -98,8 +98,8 @@ public class Amazon {
     }
     @Then("Add Price option $25 to $50")
     public void add_the_price_option_$25_to_$50() throws InterruptedException {
-        Actions actions = new Actions(driver);
-        actions.scrollByAmount(0, 1200).perform();
+        Actions action = new Actions(WebDriverInitialize.getDriver());
+        action.scrollByAmount(0, 1200).perform();
         sleep(2000);
         WebDriverInitialize.getDriver().findElement(By.xpath("//a[@data-csa-c-element-id='filter" +
                 "-price-25-50']")).click();
@@ -108,8 +108,9 @@ public class Amazon {
 
     @Then("Add Average Customer Review of 4 stars and up")
     public void add_average_customer_review_of_4_stars_and_up() throws InterruptedException {
-        Actions action = new Actions(driver);
+        Actions action = new Actions(WebDriverInitialize.getDriver());
         action.scrollByAmount(0, 2000).perform();
+
         sleep(3000);
         WebDriverInitialize.getDriver().findElement(By.xpath("//a[@data-csa-c-element-id='filter-star-rating-4']")).click();
         sleep(2000);
@@ -117,7 +118,7 @@ public class Amazon {
 
     @Then("Press button for Next page")
     public void press_button_for_next_page() throws InterruptedException {
-        Actions action = new Actions(driver);
+        Actions action = new Actions(WebDriverInitialize.getDriver());
         action.scrollByAmount(0, 2000).perform();
         sleep(2000);
         WebDriverInitialize.getDriver().findElement(By.xpath("//*[@class='a-pagination']//a[contains(text(),'Next')]")).click();
