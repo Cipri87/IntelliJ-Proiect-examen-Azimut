@@ -24,7 +24,7 @@ public class Amazon {
     @Then("Enter email address and Continue")
     public void enter_email_address_and_continue() throws InterruptedException {
         WebDriverInitialize.getDriver().findElement(By.xpath("//input[@type='email']")).sendKeys(
-                "bogdan.ciprian2587@yahoo.ro");
+                "cici@yahoo.ro");
         sleep(2000);
         WebDriverInitialize.getDriver().findElement(By.id("continue")).click();
         sleep(2000);
@@ -33,7 +33,7 @@ public class Amazon {
     @Then("Enter password and Sign In")
     public void enter_password_and_sign_in() throws InterruptedException {
         WebDriverInitialize.getDriver().findElement(By.xpath("//input[@type='password']"))
-                .sendKeys("fba2017");
+                .sendKeys("caine");
         sleep(2000);
         WebDriverInitialize.getDriver().findElement(By.xpath("//input[@id='signInSubmit']")).click();
         sleep(3000);
